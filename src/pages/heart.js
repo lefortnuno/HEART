@@ -11,22 +11,22 @@ const HeartGraph = () => {
   );
   const x = t.map((t) => Math.sin(t) ** 3);
   const y = t.map((t) => Math.cos(t) - Math.cos(t) ** 2);
- 
+
   const [displayedPoints, setDisplayedPoints] = useState(0);
 
-  useEffect(() => { 
+  useEffect(() => {
     const interval = setInterval(() => {
       setDisplayedPoints((prev) => {
         if (prev < totalPoints) {
           return prev + 8; // Augmenter par 8 points à la fois
         } else {
-          clearInterval(interval); 
+          clearInterval(interval);
           return prev;
         }
       });
     }, 50); // MAJ toutes les 50 ms
 
-    return () => clearInterval(interval); 
+    return () => clearInterval(interval);
   }, []);
 
   return (
@@ -37,14 +37,14 @@ const HeartGraph = () => {
           width: "100%",
           maxWidth: "600px",
           margin: "auto",
-          height: "480px", 
+          height: "480px",
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",
         }}
       >
         <h3 style={{ textAlign: "center" }} className="pt-4 ps-2 pe-2 pb-0">
-          La clé de ton Coeur par les Math ❤
+          Formule magique pour déchiffrer ton cœur ❤
         </h3>
         <Plot
           data={[
