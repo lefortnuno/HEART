@@ -1,0 +1,104 @@
+:root {
+  --logo-background: url("../../assets/images/logoTrofel.png");
+}
+
+.sidenav-header {
+  /* background-image: var(--logo-background); */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+}
+.sidenav-header img {
+  width: 80%;
+  height: 180%;  
+  margin-top: -8%;
+  /* object-fit: contain; */
+}
+.nySidebar-ko {
+  min-height: 350px;
+}
+
+.customNavLink {
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+  padding: 10px 15px;
+  font-weight: bold;
+  text-decoration: none;
+  background: transparent;
+  box-shadow: 0 0px 0px transparent;
+  transition: all 0.25s ease-in-out;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.customNavLink:hover {
+  background: linear-gradient(
+    90deg,
+    var(--primary-color) 0%,
+    var(--primary-color-light) 100%
+  );
+  transition: all 0.25s ease-in-out;
+}
+.customNavLink:hover > .navText {
+  color: white;
+  transition: all 0.25s ease-in-out;
+}
+.customNavLink:hover > .navIcone {
+  color: var(--primary-color);
+  background-color: rgb(242, 242, 242);
+  transition: all 0.25s ease-in-out;
+}
+
+.customNavLink.atato {
+  background: linear-gradient(
+    90deg,
+    var(--primary-color) 0%,
+    var(--primary-color-light) 100%
+  );
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.customNavLink.atato:hover {
+  background: linear-gradient(
+    90deg,
+    var(--primary-color) 0%,
+    var(--primary-color) 100%
+  );
+  transition: all 0.25s ease-in-out;
+}
+.customNavLink.atato:hover > .navIcone {
+  color: var(--primary-color);
+  background-color: rgb(255, 255, 255);
+  transition: all 0.25s ease-in-out;
+}
+
+.navText.atato {
+  color: white;
+}
+.navIcone.atato {
+  color: var(--primary-color);
+  background-color: rgb(249, 249, 249);
+}
+
+.navIcone {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(215, 215, 215);
+  border-radius: 8px;
+  width: 30px;
+  height: 30px;
+  color: #000;
+  font-size: 16px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin-right: 8px;
+}
+
+.navText {
+  color: black;
+  font-size: 14px;
+  margin-left: 8%;
+  font-weight: 500;
+}
