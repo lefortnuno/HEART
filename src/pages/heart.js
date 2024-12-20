@@ -44,7 +44,7 @@ const HeartGraph = () => {
         }}
       >
         <h3 style={{ textAlign: "center" }} className="pt-4 ps-2 pe-2 pb-0">
-          ❤ Magic Formula for Heart ❤
+          ❤ Magic Formula for Your Heart ❤
         </h3>
         <Plot
           data={[
