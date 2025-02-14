@@ -44,8 +44,7 @@ const HeartGraph = () => {
         }}
       >
         <h3 style={{ textAlign: "center" }} className="pt-4 ps-2 pe-2 pb-0">
-          ❤ Joyeux Saint-Valentin ❤
-          {/* ❤ Happy Valentine's Day ❤ */}
+          ❤ Joyeuse Saint-Valentin ❤{/* ❤ Happy Valentine's Day ❤ */}
           {/* ❤ Magic Formula for Your Heart ❤ */}
         </h3>
         <Plot
