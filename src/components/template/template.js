@@ -1,4 +1,5 @@
-import { useState } from "react"; 
+import { useState } from "react";
+import { Analytics } from "@vercel/analytics/react";
 
 import Header from "../../components/header/header";
 import Sidebar from "../../components/sidebar/sidebar";
@@ -23,6 +24,7 @@ export default function Template({ children, customInput }) {
           <Footer />
         </div>
       </main>
+      <Analytics />
     </div>
   );
 }

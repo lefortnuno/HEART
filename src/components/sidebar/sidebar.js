@@ -23,6 +23,7 @@ export default function Sidebar() {
               Pages: Utilisateurs
             </h6>
           </li>
+          
           <li className="nav-item">
             <Link
               to="/home/"
@@ -46,6 +47,7 @@ export default function Sidebar() {
               </span>
             </Link>
           </li>
+
           <li className="nav-item">
             <Link
               to="/"
@@ -69,6 +71,54 @@ export default function Sidebar() {
               </span>
             </Link>
           </li>
+
+          {/* <li className="nav-item">
+            <Link
+              to="/coeur2"
+              className={`nav-link customNavLink ${
+                location.pathname === "/coeur2" ? "atato" : ""
+              }`}
+            >
+              <div
+                className={`navIcone ${
+                  location.pathname === "/coeur2" ? "atato" : ""
+                }`}
+              >
+                <BsHeartFill />
+              </div>
+              <span
+                className={`navText ${
+                  location.pathname === "/coeur2" ? "atato" : ""
+                }`}
+              >
+                Coeur
+              </span>
+            </Link>
+          </li>
+
+          <li className="nav-item">
+            <Link
+              to="/coeur3"
+              className={`nav-link customNavLink ${
+                location.pathname === "/coeur3" ? "atato" : ""
+              }`}
+            >
+              <div
+                className={`navIcone ${
+                  location.pathname === "/coeur3" ? "atato" : ""
+                }`}
+              >
+                <BsHeartFill />
+              </div>
+              <span
+                className={`navText ${
+                  location.pathname === "/coeur3" ? "atato" : ""
+                }`}
+              >
+                Coeur
+              </span>
+            </Link>
+          </li> */}
         </ul>
       </div>
     </aside>

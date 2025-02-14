@@ -37,7 +37,7 @@ export default function Header({ setVal, children }) {
           <ul className="navbar-nav justify-content-end">
             <Notif />
 
-            <Menu />
+            {/* <Menu /> */}
 
             <li
               className="nav-item d-xl-none ps-3 d-flex align-items-center"
