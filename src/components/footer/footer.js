@@ -37,7 +37,15 @@ export default function Fotter() {
                   </a>
                 </li>
                 <li className="nav-item cursor-pointer">
-                  <div className="nav-link text-muted">APROPOS</div>
+                  <a
+                    href="https://trofel.vercel.app/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{ cursor: "pointer" }}
+                    className="nav-link text-muted"
+                  >
+                    APROPOS
+                  </a>
                 </li>
               </ul>
             </div>

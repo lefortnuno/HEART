@@ -12,9 +12,16 @@ export default function Sidebar() {
       className="sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-3 bg-white"
       id="sidenav-main"
     >
-      <a href="https://trofel.vercel.app/" target="_blank" className="sidenav-header">
-        <img src={logoTrofel} alt="Logo Trofel" />
-      </a>
+      <div className="sidenav-header">
+        <a
+          href="https://trofel.vercel.app/"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ cursor: "pointer" }}
+        >
+          <img src={logoTrofel} alt="Logo Trofel" />
+        </a>
+      </div>
       <hr className="horizontal dark mt-0" />
       <div className="collapse navbar-collapse w-auto nySidebar-ko">
         <ul className="navbar-nav">
@@ -23,7 +30,7 @@ export default function Sidebar() {
               Pages: Utilisateurs
             </h6>
           </li>
-          
+
           <li className="nav-item">
             <Link
               to="/home/"
