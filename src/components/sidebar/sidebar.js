@@ -1,11 +1,22 @@
 import { Link, useLocation } from "react-router-dom";
-import { BsHouseFill, BsHeartFill } from "react-icons/bs";
+import {
+  BsHouseFill,
+  BsHeartFill,
+  BsImages,
+  BsTornado,
+} from "react-icons/bs";
 import logoTrofel from "../../assets/images/logoTrofel.png";
-
 import "./sidebar.css";
 
 export default function Sidebar() {
   const location = useLocation();
+
+  const navItems = [
+    { path: "/home/", label: "Accueil", icon: <BsHouseFill /> },
+    { path: "/", label: "Coeur", icon: <BsHeartFill /> },
+    { path: "/gallery", label: "Gallery", icon: <BsImages /> },
+    { path: "/tore", label: "Tore", icon: <BsTornado /> },
+  ];
 
   return (
     <aside
@@ -22,7 +33,9 @@ export default function Sidebar() {
           <img src={logoTrofel} alt="Logo Trofel" />
         </a>
       </div>
+
       <hr className="horizontal dark mt-0" />
+
       <div className="collapse navbar-collapse w-auto nySidebar-ko">
         <ul className="navbar-nav">
           <li className="nav-item mt-3">
@@ -31,101 +44,20 @@ export default function Sidebar() {
             </h6>
           </li>
 
-          <li className="nav-item">
-            <Link
-              to="/home/"
-              className={`nav-link customNavLink ${
-                location.pathname === "/home/" ? "atato" : ""
-              }`}
-            >
-              <div
-                className={`navIcone ${
-                  location.pathname === "/home/" ? "atato" : ""
-                }`}
-              >
-                <BsHouseFill />
-              </div>
-              <span
-                className={`navText ${
-                  location.pathname === "/home/" ? "atato" : ""
-                }`}
-              >
-                Accueil
-              </span>
-            </Link>
-          </li>
-
-          <li className="nav-item">
-            <Link
-              to="/"
-              className={`nav-link customNavLink ${
-                location.pathname === "/" ? "atato" : ""
-              }`}
-            >
-              <div
-                className={`navIcone ${
-                  location.pathname === "/" ? "atato" : ""
-                }`}
-              >
-                <BsHeartFill />
-              </div>
-              <span
-                className={`navText ${
-                  location.pathname === "/" ? "atato" : ""
-                }`}
-              >
-                Coeur
-              </span>
-            </Link>
-          </li>
-
-          {/* <li className="nav-item">
-            <Link
-              to="/coeur2"
-              className={`nav-link customNavLink ${
-                location.pathname === "/coeur2" ? "atato" : ""
-              }`}
-            >
-              <div
-                className={`navIcone ${
-                  location.pathname === "/coeur2" ? "atato" : ""
-                }`}
-              >
-                <BsHeartFill />
-              </div>
-              <span
-                className={`navText ${
-                  location.pathname === "/coeur2" ? "atato" : ""
-                }`}
-              >
-                Coeur
-              </span>
-            </Link>
-          </li>
-
-          <li className="nav-item">
-            <Link
-              to="/coeur3"
-              className={`nav-link customNavLink ${
-                location.pathname === "/coeur3" ? "atato" : ""
-              }`}
-            >
-              <div
-                className={`navIcone ${
-                  location.pathname === "/coeur3" ? "atato" : ""
-                }`}
-              >
-                <BsHeartFill />
-              </div>
-              <span
-                className={`navText ${
-                  location.pathname === "/coeur3" ? "atato" : ""
-                }`}
-              >
-                Coeur
-              </span>
-            </Link>
-          </li> */}
+          {navItems.map(({ path, label, icon }) => {
+            const isActive = location.pathname === path;
+            return (
+              <li className="nav-item" key={path}>
+                <Link
+                  to={path}
+                  className={`nav-link customNavLink ${isActive ? "atato" : ""}`}
+                >
+                  <div className={`navIcone ${isActive ? "atato" : ""}`}>{icon}</div>
+                  <span className={`navText ${isActive ? "atato" : ""}`}>{label}</span>
+                </Link>
+              </li>
+            );
+          })}
         </ul>
       </div>
     </aside>
