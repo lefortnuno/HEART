@@ -1,0 +1,19 @@
+.vt-moving-btn {
+  position: relative;
+  z-index: 3;
+  border: 1px solid rgba(255, 255, 255, 0.32);
+  background: rgba(255, 255, 255, 0.16);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  color: #fff;
+  font-family: inherit;
+  font-size: 17px;
+  font-weight: 600;
+  padding: 14px 32px;
+  border-radius: 999px;
+  cursor: not-allowed;
+  letter-spacing: 0.3px;
+  white-space: nowrap;
+}
+
+.vt-moving-btn:hover { cursor: not-allowed; }

@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@400;500;600&display=swap');
+
+.vt-root {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  color: #fff;
+  --vt-grad-1: #ff4d6d;
+  --vt-grad-2: #c9184a;
+  --vt-grad-3: #ff85a1;
+  --vt-grad-4: #ffb3c1;
+  --vt-glass: rgba(255, 255, 255, 0.12);
+  --vt-glass-border: rgba(255, 255, 255, 0.28);
+  --vt-shadow: rgba(255, 77, 109, 0.45);
+}
+
+.vt-root.vt-dark {
+  --vt-grad-1: #4a0d2a;
+  --vt-grad-2: #1a0815;
+  --vt-grad-3: #6f1d3a;
+  --vt-grad-4: #2d0a1d;
+  --vt-glass: rgba(255, 60, 120, 0.10);
+  --vt-glass-border: rgba(255, 100, 150, 0.30);
+  --vt-shadow: rgba(120, 20, 60, 0.55);
+}
+
+.vt-bg {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  background:
+    radial-gradient(circle at 18% 22%, var(--vt-grad-3), transparent 45%),
+    radial-gradient(circle at 82% 72%, var(--vt-grad-1), transparent 50%),
+    radial-gradient(circle at 50% 50%, var(--vt-grad-4), transparent 60%),
+    linear-gradient(135deg, var(--vt-grad-2) 0%, var(--vt-grad-1) 100%);
+  background-size: 200% 200%;
+  animation: vt-bg-shift 18s ease-in-out infinite;
+}
+
+.vt-root.vt-dark .vt-bg {
+  background:
+    radial-gradient(circle at 18% 22%, var(--vt-grad-3), transparent 45%),
+    radial-gradient(circle at 82% 72%, var(--vt-grad-1), transparent 50%),
+    radial-gradient(circle at 50% 50%, var(--vt-grad-4), transparent 65%),
+    linear-gradient(135deg, var(--vt-grad-2) 0%, #0a0308 100%);
+}
+
+@keyframes vt-bg-shift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+.vt-stage {
+  position: relative;
+  z-index: 2;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.vt-card {
+  width: min(560px, 92vw);
+  padding: 48px 36px;
+  border-radius: 28px;
+  text-align: center;
+  position: relative;
+}
+
+.vt-glass {
+  background: var(--vt-glass);
+  backdrop-filter: blur(18px) saturate(180%);
+  -webkit-backdrop-filter: blur(18px) saturate(180%);
+  border: 1px solid var(--vt-glass-border);
+  box-shadow:
+    0 25px 60px rgba(0, 0, 0, 0.28),
+    inset 0 1px 0 rgba(255, 255, 255, 0.20);
+}
+
+.vt-image {
+  position: relative;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  margin: 0 auto 28px;
+}
+
+.vt-image-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #ff4d6d 0%, #ff85a1 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 64px;
+  box-shadow:
+    0 18px 40px var(--vt-shadow),
+    inset 0 -6px 18px rgba(0, 0, 0, 0.18),
+    inset 0 4px 14px rgba(255, 255, 255, 0.35);
+  z-index: 1;
+}
+
+.vt-image-glow {
+  position: absolute;
+  inset: -22px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 180, 200, 0.65), transparent 60%);
+  z-index: 0;
+  filter: blur(22px);
+  animation: vt-glow-pulse 2.6s ease-in-out infinite;
+}
+
+@keyframes vt-glow-pulse {
+  0%, 100% { transform: scale(1); opacity: 0.85; }
+  50% { transform: scale(1.18); opacity: 1; }
+}
+
+.vt-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(28px, 5vw, 44px);
+  font-weight: 700;
+  line-height: 1.15;
+  margin: 0 0 14px;
+  letter-spacing: -0.5px;
+  perspective: 600px;
+}
+
+.vt-title-emoji {
+  display: inline-block;
+  margin-left: 8px;
+}
+
+.vt-sub {
+  font-size: 16px;
+  margin: 0 0 32px;
+  opacity: 0.88;
+  font-style: italic;
+  min-height: 24px;
+}
+
+.vt-actions {
+  display: flex;
+  gap: 18px;
+  justify-content: center;
+  flex-wrap: wrap;
+  position: relative;
+  min-height: 56px;
+}
+
+.vt-btn {
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 17px;
+  font-weight: 600;
+  padding: 14px 32px;
+  border-radius: 999px;
+  letter-spacing: 0.3px;
+  color: #fff;
+}
+
+.vt-btn-yes {
+  background: linear-gradient(135deg, #ff4d6d, #c9184a);
+  box-shadow:
+    0 14px 30px rgba(255, 77, 109, 0.5),
+    inset 0 1px 0 rgba(255, 255, 255, 0.45);
+}
+
+.vt-btn-no {
+  background: rgba(255, 255, 255, 0.16);
+  border: 1px solid rgba(255, 255, 255, 0.32);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.vt-toolbar {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 5;
+  display: flex;
+  gap: 8px;
+}
+
+.vt-toggle {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  cursor: pointer;
+  font-size: 18px;
+  color: white;
+  transition: transform 0.2s ease;
+}
+
+.vt-toggle:hover { transform: scale(1.08); }
+
+.vt-celebrate { padding: 64px 36px; }
+
+.vt-bigheart {
+  font-size: 96px;
+  margin-bottom: 16px;
+  filter: drop-shadow(0 12px 32px rgba(255, 77, 109, 0.6));
+  line-height: 1;
+}
+
+.vt-celebrate-text {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(28px, 5vw, 42px);
+  margin: 0;
+  font-weight: 700;
+}
+
+.vt-final { padding: 56px 36px; }
+
+.vt-final-emoji {
+  font-size: 80px;
+  margin-bottom: 18px;
+  filter: drop-shadow(0 10px 30px rgba(255, 140, 170, 0.55));
+  line-height: 1;
+}
+
+.vt-final-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(26px, 4.5vw, 38px);
+  margin: 0 0 12px;
+  font-weight: 700;
+}
+
+.vt-final-msg {
+  font-size: 17px;
+  opacity: 0.92;
+  margin: 0 0 28px;
+  font-style: italic;
+  line-height: 1.55;
+}
+
+.vt-easter {
+  margin-top: 18px;
+  font-size: 13px;
+  opacity: 0.78;
+  background: rgba(255, 255, 255, 0.10);
+  padding: 8px 14px;
+  border-radius: 999px;
+  display: inline-block;
+}
+
+.vt-confetti {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 4;
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 480px) {
+  .vt-card { padding: 36px 22px; }
+  .vt-image { width: 110px; height: 110px; }
+  .vt-image-inner { font-size: 50px; }
+  .vt-btn { padding: 12px 26px; font-size: 16px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .vt-bg { animation: none; }
+  .vt-image-glow { animation: none; }
+}
