@@ -1,4 +1,5 @@
-import { BsBell, BsBellFill } from "react-icons/bs";
+import { BsBell } from "react-icons/bs";
+// import { BsBell, BsBellFill } from "react-icons/bs";
 
 export default function Notif() {
   return (

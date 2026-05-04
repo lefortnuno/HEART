@@ -11,7 +11,7 @@ const PolarCurve = () => {
   // Choisis ici ta fonction r(t)
   const r = t.map((t) => Math.sin(4 * t));
   // pour changer sa forme on change r
-  const r_ = t.map((t) => Math.sin(4 * t)); // ou sin(4t) cos(3t), exp(t), etc.
+  // const r_ = t.map((t) => Math.sin(4 * t)); // ou sin(4t) cos(3t), exp(t), etc.
 
   const x = r.map((r, i) => r * Math.cos(t[i]));
   const y = r.map((r, i) => r * Math.sin(t[i]));

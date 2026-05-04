@@ -3382,7 +3382,7 @@ textarea.form-control.is-valid {
 
 .was-validated .form-control-color:valid,
 .form-control-color.is-valid {
-  width: calc(3rem + unset);
+  width: calc(3rem + 0px);
 }
 
 .was-validated .form-check-input:valid,
@@ -3492,7 +3492,7 @@ textarea.form-control.is-invalid {
 
 .was-validated .form-control-color:invalid,
 .form-control-color.is-invalid {
-  width: calc(3rem + unset);
+  width: calc(3rem + 0px);
 }
 
 .was-validated .form-check-input:invalid,

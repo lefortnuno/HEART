@@ -10,6 +10,7 @@ export default function Fotter() {
                   href="https://www.facebook.com/tendo.lelouch"
                   className="font-weight-bold"
                   target="_blank"
+                  rel="noopener noreferrer"
                 >
                   © 2024 TROFEL
                 </a>{" "}
@@ -23,6 +24,7 @@ export default function Fotter() {
                     href="http://www.fsr.ac.ma/"
                     className="nav-link text-muted"
                     target="_blank"
+                    rel="noopener noreferrer"
                   >
                     F.S.R
                   </a>
@@ -32,6 +34,7 @@ export default function Fotter() {
                     href="https://web.facebook.com/EcoleNationaleInformatiqueFianarantsoa"
                     className="nav-link text-muted"
                     target="_blank"
+                    rel="noopener noreferrer"
                   >
                     E.N.I
                   </a>

@@ -22,7 +22,7 @@ export default function Menu() {
             <li>
               <div className="user-box">
                 <div className="u-img">
-                  <img src={Trofel} alt="Profile Picture" />
+                  <img src={Trofel} alt="Profile_Picture" />
                 </div>
                 <div className="u-text">
                   <h5> LEFORT</h5>
