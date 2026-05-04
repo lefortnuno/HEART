@@ -143,7 +143,6 @@ export default function Valentine() {
 
               <h1
                 className="vt-title"
-                style={{ fontSize: "38px" }}
                 aria-label={text}
               >
                 {letters.map((c, i) => (
