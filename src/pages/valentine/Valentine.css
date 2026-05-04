@@ -314,23 +314,21 @@
     animation: none;
   }
 }
-
-/* Version responsive pour les petits écrans */
+ 
 @media (max-width: 768px) {
   .vt-title {
-    font-size: 32px;  /* Réduction sur tablette */
+    font-size: 32px;   
   }
 }
 
 @media (max-width: 480px) {
   .vt-title {
-    font-size: 26px;  /* Encore plus petit sur mobile */
+    font-size: 26px;  
   }
 }
-
-/* Optionnel : Pour les très grands écrans, on peut limiter */
+ 
 @media (min-width: 2000px) {
   .vt-title {
-    font-size: 42px;  /* Légèrement plus grand sur desktop */
+    font-size: 42px;  
   }
 }
