@@ -141,10 +141,7 @@ export default function Valentine() {
                 <div className="vt-image-inner">💖</div>
               </motion.div>
 
-              <h1
-                className="vt-title"
-                aria-label={text}
-              >
+              <h1 className="vt-title" aria-label={text}>
                 {letters.map((c, i) => (
                   <motion.span
                     key={i}

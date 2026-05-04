@@ -1,11 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@400;500;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@400;500;600&display=swap");
 
 .vt-root {
   position: relative;
   min-height: 100vh;
   width: 100%;
   overflow: hidden;
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-family:
+    "Inter",
+    system-ui,
+    -apple-system,
+    sans-serif;
   color: #fff;
   --vt-grad-1: #ff4d6d;
   --vt-grad-2: #c9184a;
@@ -21,8 +25,8 @@
   --vt-grad-2: #1a0815;
   --vt-grad-3: #6f1d3a;
   --vt-grad-4: #2d0a1d;
-  --vt-glass: rgba(255, 60, 120, 0.10);
-  --vt-glass-border: rgba(255, 100, 150, 0.30);
+  --vt-glass: rgba(255, 60, 120, 0.1);
+  --vt-glass-border: rgba(255, 100, 150, 0.3);
   --vt-shadow: rgba(120, 20, 60, 0.55);
 }
 
@@ -48,8 +52,13 @@
 }
 
 @keyframes vt-bg-shift {
-  0%, 100% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
 }
 
 .vt-stage {
@@ -77,7 +86,7 @@
   border: 1px solid var(--vt-glass-border);
   box-shadow:
     0 25px 60px rgba(0, 0, 0, 0.28),
-    inset 0 1px 0 rgba(255, 255, 255, 0.20);
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
 }
 
 .vt-image {
@@ -109,25 +118,37 @@
   position: absolute;
   inset: -22px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(255, 180, 200, 0.65), transparent 60%);
+  background: radial-gradient(
+    circle,
+    rgba(255, 180, 200, 0.65),
+    transparent 60%
+  );
   z-index: 0;
   filter: blur(22px);
   animation: vt-glow-pulse 2.6s ease-in-out infinite;
 }
 
 @keyframes vt-glow-pulse {
-  0%, 100% { transform: scale(1); opacity: 0.85; }
-  50% { transform: scale(1.18); opacity: 1; }
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.85;
+  }
+  50% {
+    transform: scale(1.18);
+    opacity: 1;
+  }
 }
 
 .vt-title {
-  font-family: 'Playfair Display', Georgia, serif;
+  font-family: "Playfair Display", Georgia, serif;
   font-size: clamp(28px, 5vw, 44px);
   font-weight: 700;
   line-height: 1.15;
   margin: 0 0 14px;
   letter-spacing: -0.5px;
   perspective: 600px;
+    font-size: 38px;
 }
 
 .vt-title-emoji {
@@ -201,9 +222,13 @@
   transition: transform 0.2s ease;
 }
 
-.vt-toggle:hover { transform: scale(1.08); }
+.vt-toggle:hover {
+  transform: scale(1.08);
+}
 
-.vt-celebrate { padding: 64px 36px; }
+.vt-celebrate {
+  padding: 64px 36px;
+}
 
 .vt-bigheart {
   font-size: 96px;
@@ -213,13 +238,15 @@
 }
 
 .vt-celebrate-text {
-  font-family: 'Playfair Display', Georgia, serif;
+  font-family: "Playfair Display", Georgia, serif;
   font-size: clamp(28px, 5vw, 42px);
   margin: 0;
   font-weight: 700;
 }
 
-.vt-final { padding: 56px 36px; }
+.vt-final {
+  padding: 56px 36px;
+}
 
 .vt-final-emoji {
   font-size: 80px;
@@ -229,7 +256,7 @@
 }
 
 .vt-final-title {
-  font-family: 'Playfair Display', Georgia, serif;
+  font-family: "Playfair Display", Georgia, serif;
   font-size: clamp(26px, 4.5vw, 38px);
   margin: 0 0 12px;
   font-weight: 700;
@@ -247,7 +274,7 @@
   margin-top: 18px;
   font-size: 13px;
   opacity: 0.78;
-  background: rgba(255, 255, 255, 0.10);
+  background: rgba(255, 255, 255, 0.1);
   padding: 8px 14px;
   border-radius: 999px;
   display: inline-block;
@@ -263,13 +290,47 @@
 }
 
 @media (max-width: 480px) {
-  .vt-card { padding: 36px 22px; }
-  .vt-image { width: 110px; height: 110px; }
-  .vt-image-inner { font-size: 50px; }
-  .vt-btn { padding: 12px 26px; font-size: 16px; }
+  .vt-card {
+    padding: 36px 22px;
+  }
+  .vt-image {
+    width: 110px;
+    height: 110px;
+  }
+  .vt-image-inner {
+    font-size: 50px;
+  }
+  .vt-btn {
+    padding: 12px 26px;
+    font-size: 16px;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .vt-bg { animation: none; }
-  .vt-image-glow { animation: none; }
+  .vt-bg {
+    animation: none;
+  }
+  .vt-image-glow {
+    animation: none;
+  }
+}
+
+/* Version responsive pour les petits écrans */
+@media (max-width: 768px) {
+  .vt-title {
+    font-size: 32px;  /* Réduction sur tablette */
+  }
+}
+
+@media (max-width: 480px) {
+  .vt-title {
+    font-size: 26px;  /* Encore plus petit sur mobile */
+  }
+}
+
+/* Optionnel : Pour les très grands écrans, on peut limiter */
+@media (min-width: 2000px) {
+  .vt-title {
+    font-size: 42px;  /* Légèrement plus grand sur desktop */
+  }
 }
